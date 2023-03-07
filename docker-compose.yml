@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+  nginx:
+    platform: linux/x86_64
+    container_name: nginx
+    image: nginx:latest
+    volumes:
+      - ./nginx/html/:/usr/share/nginx/html/
+      - ./nginx/conf/:/etc/nginx/conf.d/
+    ports:
+      - '127.0.0.1:80:80'
